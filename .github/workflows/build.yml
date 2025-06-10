@@ -21,7 +21,9 @@ jobs:
         run: pip install --upgrade west
 
       - name: West init
-        run: west init -m https://github.com/zmkfirmware/zmk.git --mr main config
+        run: |
+          rm -rf config/.west
+          west init -m https://github.com/zmkfirmware/zmk.git --mr main config
 
       - name: West update
         run: west update
