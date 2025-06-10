@@ -1,0 +1,6 @@
+build:
+  include: config
+  board: nice_nano
+  shield:
+    - charybdis_4x6_left
+    - charybdis_4x6_right
