@@ -1,0 +1,30 @@
+
+/ {
+  behaviors {
+    mkp_lclk: mkp_lclk {
+      compatible = "zmk,behavior-mouse-key";
+      label = "Mouse Left Click";
+      tapping-term-ms = <200>;
+      bindings = <&mkp MOUSE_BTN1>;
+    };
+
+    mkp_rclk: mkp_rclk {
+      compatible = "zmk,behavior-mouse-key";
+      label = "Mouse Right Click";
+      tapping-term-ms = <200>;
+      bindings = <&mkp MOUSE_BTN2>;
+    };
+
+    sniper_config: sniper {
+      compatible = "zmk,behavior-mouse-key";
+      label = "Sniper Precision";
+      bindings = <&mkp SNIPER>;
+    };
+
+    scroll_config: scroll {
+      compatible = "zmk,behavior-mouse-key";
+      label = "Scroll Mode";
+      bindings = <&mkp SCROLL>;
+    };
+  };
+};

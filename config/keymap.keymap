@@ -1,0 +1,65 @@
+keymap:
+  - name: BASE
+    layers:
+      - [
+          &kp ESCAPE, &kp 1, &kp 2, &kp 3, &kp 4, &kp 5,
+          &kp 6, &kp 7, &kp 8, &kp 9, &kp 0, &kp BSPACE,
+          &kp TAB, &kp Q, &kp W, &kp E, &kp R, &kp T,
+          &kp Y, &kp U, &kp I, &kp O, &kp P, &kp MINUS,
+          &kp LCTL, &kp A, &kp S, &kp D, &kp F, &kp G,
+          &kp H, &kp J, &kp K, &kp L, &kp SCOLON, LT(MOVE,
+          &kp QUOTE,
+        ]
+  - name: NUMERIC
+    layers:
+      - [
+          &kp TILDE, &bt BT_CLR, &kp AT, &kp HASH, &kp DOLLAR, &kp PERCENT,
+          &kp CIRCUMFLEX, &kp AMPERSAND, &kp ASTERISK, &kp MINUS, &kp EQUAL, &kp BSPACE,
+          &kp TILDE, &kp EXCLAIM, &kp AT, &kp HASH, &kp DOLLAR, &kp PERCENT,
+          &kp CIRCUMFLEX, &kp AMPERSAND, &kp ASTERISK, &kp MINUS, &kp EQUAL, &kp BSPACE,
+          &kp 0, &kp 1, &kp 2, &kp 3, &kp 4, &kp 5,
+          &kp 6, &kp 7, &kp 8, &kp 9, &kp 0, LT(MOVE,
+          &kp ENTER,
+        ]
+  - name: MOVE
+    layers:
+      - [
+          &kp TRNS, LALT(KC_V,
+        ]
+  - name: EMACS
+    layers:
+      - [
+          &kp ESCAPE, &kp TRNS, &kp TRNS, MACRO_1, MACRO_2, MACRO_3,
+          MACRO_4, &kp TRNS, &kp TRNS, MACRO_5, &kp TRNS, &kp TRNS,
+          &kp ESCAPE, &kp TRNS, &kp TRNS, MACRO_6, MACRO_7, MACRO_8,
+          MACRO_9, &kp TRNS, &kp TRNS, MACRO_10, &kp TRNS, &kp TRNS,
+          &kp TRNS, &kp TRNS, LALT(KC_PERCENT,
+        ]
+  - name: HYPM
+    layers:
+      - [
+          &kp X, &kp TRNS, &kp TRNS, &kp TRNS, &kp TRNS, MACRO_17,
+          &kp TRNS, &kp TRNS, &kp I, MACRO_18, MACRO_19, &kp TRNS,
+          &kp X, &kp TRNS, &kp TRNS, &kp TRNS, &kp TRNS, MACRO_20,
+          &kp TRNS, &kp TRNS, &kp I, MACRO_21, MACRO_22, &kp TRNS,
+          &kp TRNS, &kp TRNS, &kp TRNS, &kp D, &kp TRNS, MACRO_23,
+          &kp TRNS, &kp TRNS, &kp TRNS, &kp TRNS, &kp TRNS, &kp TRNS,
+          &kp TRNS, &kp TRNS, &kp TRNS, &kp TRNS, &kp TRNS, &kp TRNS,
+          MACRO_24, MACRO_25, &kp TRNS, &kp TRNS, &kp TRNS, &kp TRNS,
+          &kp TRNS, &kp TRNS, &kp TRNS, &kp TRNS, &kp TRNS, &kp NO,
+          &kp TRNS, &kp TRNS, &kp TRNS, &kp NO,
+        ]
+  - name: MOUSE
+    layers:
+      - [
+          &kp TRNS, &kp TRNS, &kp TRNS, &kp TRNS, &kp TRNS, &kp TRNS,
+          &kp TRNS, &kp TRNS, &kp TRNS, &kp TRNS, &kp TRNS, &kp TRNS,
+          &kp TRNS, SNIPER_CONFIG, &kp TRNS, &kp TRNS, &kp TRNS, &kp TRNS,
+          &kp TRNS, &kp TRNS, &kp TRNS, &kp TRNS, &kp TRNS, &kp TRNS,
+          &kp TRNS, DPI_CONFIG, DRAG_SCROLL, &kp TRNS, &kp TRNS, &kp TRNS,
+          &kp TRNS, &kp TRNS, DRAG_SCROLL, &kp TRNS, &kp TRNS, &kp TRNS,
+          &kp TRNS, &kp TRNS, &kp TRNS, &kp TRNS, &kp TRNS, &kp TRNS,
+          &kp TRNS, &kp BTN1, &kp BTN2, &kp BTN3, &kp TRNS, &kp TRNS,
+          &kp BTN2, &kp BTN1, &kp BTN3, &kp TRNS, &kp NO, &kp NO,
+          &kp LSFT, &kp LGUI, &kp TRNS, &kp NO,
+        ]
