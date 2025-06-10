@@ -17,6 +17,9 @@ jobs:
         with:
           python-version: '3.x'
 
+      - name: Install west
+        run: pip install --upgrade west
+
       - name: Fetch ZMK
         uses: actions/checkout@v3
         with:
