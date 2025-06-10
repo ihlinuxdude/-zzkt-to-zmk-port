@@ -6,4 +6,42 @@ on:
 
 jobs:
   build:
-    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+    name: Build user config
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout user config
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Fetch ZMK
+        uses: actions/checkout@v3
+        with:
+          repository: zmkfirmware/zmk
+          path: zmk
+
+      - name: West init
+        run: west init -l config
+
+      - name: West update
+        run: west update
+
+      - name: Export ZEPHYR_BASE
+        run: echo "ZEPHYR_BASE=$(pwd)/zmk/zephyr" >> $GITHUB_ENV
+
+      - name: Build (left)
+        run: west build -s zmk/app -d build/left -b nice_nano -- -DSHIELD=charybdis_4x6_left
+
+      - name: Build (right)
+        run: west build -s zmk/app -d build/right -b nice_nano -- -DSHIELD=charybdis_4x6_right
+
+      - name: Upload firmware artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: firmware
+          path: |
+            build/left/zephyr/zmk.uf2
+            build/right/zephyr/zmk.uf2
