@@ -20,14 +20,8 @@ jobs:
       - name: Install west
         run: pip install --upgrade west
 
-      - name: Fetch ZMK
-        uses: actions/checkout@v3
-        with:
-          repository: zmkfirmware/zmk
-          path: zmk
-
       - name: West init
-        run: west init -l config
+        run: west init -m https://github.com/zmkfirmware/zmk.git --mr main config
 
       - name: West update
         run: west update
