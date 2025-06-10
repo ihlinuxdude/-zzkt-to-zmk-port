@@ -22,8 +22,8 @@ jobs:
 
       - name: West init
         run: |
-          rm -rf config/.west
-          west init -m https://github.com/zmkfirmware/zmk.git --mr main config
+          rm -rf "config/.west"
+          west init -m https://github.com/zmkfirmware/zmk.git --mr main "config"
 
       - name: West update
         run: west update
