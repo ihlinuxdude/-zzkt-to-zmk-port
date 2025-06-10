@@ -1,0 +1,25 @@
+# Ignore build outputs
+build/
+out/
+zephyr/
+cmake-build-*/
+*.elf
+*.uf2
+*.bin
+*.hex
+*.map
+
+# Ignore system or backup files
+.DS_Store
+*.swp
+*.swo
+*.bak
+*.tmp
+
+# ZMK CI files (cached logs, etc.)
+*.log
+*.pyc
+__pycache__/
+
+# VSCode
+.vscode/
